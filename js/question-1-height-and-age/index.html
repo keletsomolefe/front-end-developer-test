@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Height and Age Classifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <style>
+      footer{
+        position:absolute;
+        bottom:0;
+        width:100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="w3-container w3-red">
+      <h1>Height and Age Classifier</h1>
+    </header>
+
+    <br>
+    <br>
+    <div class="w3-modal-content w3-card-4">
+      <div class="w3-container w3-red">
+        <h2>Input</h2>
+      </div>
+      <form class="w3-container" name="form1" onsubmit="return classify(this)">
+        <p>
+        <label>Age in years</label>
+        <input class="w3-input" type="number" name="age" id="age" min="1" step="1" max="120" required></p>
+        <p>
+        <label>Height in cm</label>
+        <input class="w3-input" type="number" name="height" id="height" min="50" step="0.01" max="200" required></p>
+        <button class="w3-btn w3-red">Classify</button>
+      </form>
+      <br>
+    </div>
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+          <p>Results</p>
+          <p id="output"></p>
+        </div>
+      </div>
+    </div>
+    <footer class="w3-container w3-red w3-margin-top">
+      <h5>Height and Age Classifier</h5>
+      <p>&#169;Copyright KELETSO MOLEFE PATRICK</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
